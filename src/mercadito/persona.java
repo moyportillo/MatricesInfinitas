@@ -9,6 +9,10 @@ package mercadito;
 public class persona {
     
     protected String id, nombre, apellido;
+    
+    public persona(){
+        
+    }
 
     public persona(String id, String nombre, String apellido) {
         this.id = id;

@@ -6,25 +6,30 @@ import javax.swing.JOptionPane;
 
 public class metodos {
     
-    Integer cont = 1;
-    private Integer opc = 0;
+    Integer cont = 1, opc = 0;
     String[][] verctor_esclavo = new String[1][8];
-    
+    vehiculo datos = new vehiculo();
     
     public void menu(){
+        do{
         opc = Integer.parseInt(JOptionPane.showInputDialog(null, "MENU\n1.Agregar Nueva Factura\n2.Mostrar Facturas\n3.Buscar Factura\n4.Salir\nSeleccione una opcion: "));
-        
         switch(opc){
             case 1:
                     ingreso();
                     break;
             case 2:
+                    this.datos.lista();
                     break;
             case 3:
                     break;
+            case 4:
+                    JOptionPane.showMessageDialog(null, "Gracias Por Usar nuestro Programa");
+                    break;
             default:
+                    JOptionPane.showMessageDialog(null, "Opcion no valida. \nFavor Ingrese una opcion del menu.");
                     break;
         }
+        }while(opc!=4);
     }
     
     public void ingreso(){
@@ -43,7 +48,7 @@ public class metodos {
          
             vehiculo factura = new vehiculo(id, nom, ape, model, color, precio, imp, subtotal, total, vendedor);
             
-            factura.mostrar();
+            factura.capturar();
     }
     
     
