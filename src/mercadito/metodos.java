@@ -12,7 +12,7 @@ public class metodos {
     
     public void menu(){
         do{
-        opc = Integer.parseInt(JOptionPane.showInputDialog(null, "MENU\n1.Agregar Nueva Factura\n2.Mostrar Facturas\n3.Buscar Factura\n4.Salir\nSeleccione una opcion: "));
+        opc = Integer.parseInt(JOptionPane.showInputDialog(null, "MENU\n1.Agregar Nueva Factura\n2.Mostrar Facturas\n3.Factura Ordenadas\n4.Salir\nSeleccione una opcion: "));
         switch(opc){
             case 1:
                     ingreso();
@@ -21,6 +21,7 @@ public class metodos {
                     this.datos.lista();
                     break;
             case 3:
+                    this.datos.Ordenamiento();
                     break;
             case 4:
                     JOptionPane.showMessageDialog(null, "Gracias Por Usar nuestro Programa");
